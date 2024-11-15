@@ -1,0 +1,31 @@
+{
+  "name": "ygo-scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "run-p binders tags cards",
+    "binders": "node insert_binder_and_avatars.js",
+    "tags": "node tag-gen.js",
+    "cards": "node card-migration.js",
+    "images": "node image-upload.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dustin Hershman",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.693.0",
+    "axios": "^1.7.7",
+    "cli-progress": "^3.12.0",
+    "dotconfig": "^0.0.1-security",
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "npm-run-all2": "^7.0.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  }
+}
