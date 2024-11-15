@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "run-p binders tags cards",
+    "no-binders": "run-p tags cards",
     "binders": "node insert_binder_and_avatars.js",
     "tags": "node tag-gen.js",
     "cards": "node card-migration.js",

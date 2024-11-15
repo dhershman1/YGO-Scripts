@@ -30,6 +30,7 @@ npm i
 and you should be good to run the scripts.
 
 You can use `npm start` to run all of the scripts (besides the image transfer one) at the same time
+You can also use `npm run no-binders` so you run both the other scripts without the binders one
 
 ## Card Migration
 
