@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 let db = null
 
-if (process.env.DATABASE_URL || process.env.NODE_ENV === 'production') {
+if (process.env.DATABASE_URL) {
   db = knex({
     client: 'pg',
     connection: process.env.DATABASE_URL,

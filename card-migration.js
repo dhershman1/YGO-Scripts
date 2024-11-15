@@ -12,7 +12,7 @@ const ANALYTICS = {
 const DBO_URL = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?misc=yes'
 let db = null
 
-if (process.env.DATABASE_URL || process.env.NODE_ENV === 'production') {
+if (process.env.DATABASE_URL) {
   db = knex({
     client: 'pg',
     connection: process.env.DATABASE_URL,

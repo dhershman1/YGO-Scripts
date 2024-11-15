@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 let db = null
 
-if (process.env.DATABASE_URL || process.env.NODE_ENV === 'production') {
+if (process.env.DATABASE_URL) {
   db = knex({
     client: 'pg',
     connection: process.env.DATABASE_URL,
@@ -29,7 +29,8 @@ const BINDERS = [
   // ['filename', 'artist']
   // TODO: Remove AI Binder when we have a proper artists
   ['binder.webp', 'AI'],
-  ['vintage_binder.jpg', 'Elina Shepherd/@elinasheph.bsky.social']
+  ['vintage_binder.jpg', 'Elina Shepherd/@elinasheph.bsky.social'],
+  ['blue_warp.jpg', 'Ava James/@avajame.bsky.social']
 ]
 const AVATARS = []
 const multibar = new cliProgress.MultiBar({

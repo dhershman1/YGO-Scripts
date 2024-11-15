@@ -6,9 +6,9 @@ import knex from 'knex'
 import cliProgress from 'cli-progress'
 import 'dotenv/config'
 
-const REGION = 'us-east-2'
+const REGION = process.env.AWS_REGION
 const BATCH_SIZE = 19
-const BUCKET = 'yugibinder-images'
+const BUCKET = process.env.S3_BUCKET
 const ANALYTICS = {
   total: 0,
   processed: 0,
@@ -21,7 +21,7 @@ const s3 = new S3Client({ region: REGION })
 
 let db = null
 
-if (process.env.DATABASE_URL || process.env.NODE_ENV === 'production') {
+if (process.env.DATABASE_URL) {
   db = knex({
     client: 'pg',
     connection: process.env.DATABASE_URL,
