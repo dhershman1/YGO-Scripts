@@ -33,11 +33,7 @@ if (process.env.DATABASE_URL) {
 }
 
 function printAnalytics () {
-  console.log(`
-    Total: ${ANALYTICS.total}
-    Processed: ${ANALYTICS.processed}
-    Errors: ${ANALYTICS.errors}
-  `)
+  console.table(ANALYTICS)
 }
 
 async function shouldRun () {

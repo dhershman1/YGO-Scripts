@@ -47,11 +47,7 @@ function sleep (ms) {
 
 function printAnalytics () {
   console.log('Analytics:')
-  console.log('Failed images list:', ANALYTICS.failedImages)
-  console.log('Total images:', ANALYTICS.total)
-  console.log('Processed images:', ANALYTICS.processed)
-  console.log('Skipped images:', ANALYTICS.skipped)
-  console.log('Failed images:', ANALYTICS.failed)
+  console.table(ANALYTICS)
 }
 
 async function fetchImageUrls (apiEndpoint) {
