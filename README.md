@@ -46,12 +46,14 @@ npm run cards
 
 This script will take the longest out of all of them, it runs in batches of 19 calls per second. This is because ygoprodeck limits how many calls you can make per second (including images)
 
-It will take all the card images from the api request and upload them to the desired S3 bucket.
+It will take all the card images (besides cropped) from the api request and upload them to the desired S3 bucket.
 
 It follows these S3 keys:
 
 `cards/normal/{card_id}.jpg`
 `cards/small/{card_id}.jpg`
+
+Make sure your S3 is setup locally to have access rights to your AWS console!
 
 ### Usage
 
