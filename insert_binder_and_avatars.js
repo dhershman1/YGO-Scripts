@@ -30,7 +30,8 @@ const BINDERS = [
   // TODO: Remove AI Binder when we have a proper artists
   ['binder.webp', 'AI'],
   ['vintage_binder.jpg', 'Elina Shepherd/@elinasheph.bsky.social'],
-  ['blue_warp.jpg', 'Ava James/@avajame.bsky.social']
+  ['blue_warp.jpg', 'Ava James/@avajame.bsky.social'],
+  ['golden_tome.jpeg', 'Bella Harinson/@bellaharinson.bsky.social']
 ]
 const AVATARS = []
 const multibar = new cliProgress.MultiBar({
